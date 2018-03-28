@@ -1,0 +1,12 @@
+Dokumentation		$EAGLEDIR\doc
+Bibliotheken		$EAGLEDIR\lbr;$HOME\eagle\lbr
+Design-Regeln		$EAGLEDIR\dru
+User-Language-Programme	$EAGLEDIR\ulp
+Script-Dateien		$EAGLEDIR\scr
+CAM-Jobs		$EAGLEDIR\cam
+Projekte		$HOME\eagle\projects;$EAGLEDIR\projects\examples
+
+Wenn eine Nachricht erscheint, dass die Verzeichnisse noch nicht existieren, müssen
+Sie zuerst das $HOME\eagle Verzeichnis von git clonen:
+$ cd [My Documents]
+$ git clone ... eagle
