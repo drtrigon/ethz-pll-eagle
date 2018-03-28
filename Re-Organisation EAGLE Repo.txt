@@ -1,0 +1,7 @@
+
+organisation eagle (und arduino) repos:
+
+- 1 repo für alle libs
+- 1 repo pro projekt
+- 1 "sammel" repo, das alle vorherigen als externals/submodule/oder so
+    enthält und das "eagle" (oder "sketchbook") Verzeichnis erzeugt/darstellt
