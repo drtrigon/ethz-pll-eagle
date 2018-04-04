@@ -28,8 +28,9 @@ before_install:
   - wget ftp://ftp.cadsoft.de/eagle/program/7.7/eagle-lin64-7.7.0.run
   - chmod +x $PWD/eagle-lin64-7.7.0.run
   - $PWD/eagle-lin64-7.7.0.run & sleep 10; xdotool key Return; xdotool key Return; xdotool key Return; xdotool key Return; sleep 10; xdotool keydown alt key E; xdotool keyup alt; xdotool key Return; xdotool key Return
+  - sudo mv $HOME/eagle-7.7.0 $PWD/eagle-7.7.0
   - export EAGLE=$HOME/eagle-7.7.0/bin/eagle
-  - sleep 3
+  - sleep 10
   - $HOME/eagle-7.7.0/bin/eagle -? || true
   - ${EAGLE} -? || true
   - sudo apt-get install tree
