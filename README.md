@@ -1,6 +1,11 @@
+## Blattdurchmesser
+[![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
+
+https://gitlab.ethz.ch/PLL/Blattdurchmesser
+
+[![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
+
 ## Issues/TODO
-* replace images here with correct ones
-* add images from here to Blattdurchmesser repo
 * consider enabling and adding eagle-travis struff here and in Blattdurchmesser repo
 
 ## Setup
@@ -27,13 +32,6 @@ origin  https://gitlab.ethz.ch/PLL/eagle.git (fetch)
 origin  https://gitlab.ethz.ch/PLL/eagle.git (push)
 origin  https://github.com/drtrigon/ethz-pll-eagle.git (push)
 ```
-
-## Blattdurchmesser
-[![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
-
-https://gitlab.ethz.ch/PLL/Blattdurchmesser
-
-[![test-eagle-edrc.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/test-eagle-edrc/img/file/test-eagle-edrc.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/test-eagle-edrc)
 
 ## Further Info
 https://github.com/drtrigon/test-eagle-edrc
