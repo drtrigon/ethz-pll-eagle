@@ -28,11 +28,11 @@ before_install:
   - wget ftp://ftp.cadsoft.de/eagle/program/7.7/eagle-lin64-7.7.0.run
   - chmod +x $PWD/eagle-lin64-7.7.0.run
   - $PWD/eagle-lin64-7.7.0.run & sleep 10; xdotool key Return; xdotool key Return; xdotool key Return; xdotool key Return; sleep 10; xdotool keydown alt key E; xdotool keyup alt; xdotool key Return; xdotool key Return
-#  - sudo mv arduino-$ARDUINO_VERSION /usr/local/share/arduino
-#  - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
+  - export EAGLE=$HOME/eagle-7.7.0/bin/eagle
+  - sleep 3
+  - $HOME/eagle-7.7.0/bin/eagle -? || true
+  - ${EAGLE} -? || true
   - sudo apt-get install tree
-  #- sudo pip install ino
-  #- sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
 
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
@@ -42,10 +42,18 @@ script:
   #- $PWD/eagle-8.7.1/eagle -? || true
   - ls -la $HOME/eagle-7.7.0/bin/eagle || true
   - $HOME/eagle-7.7.0/bin/eagle -? || true
-#  #- ls -la
-#  #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
-#  - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
-#  #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
+  - export outputfile=$PWD/test
+  - export board=$PWD/projects/Blattdurchmesser/Blattdurchmesser.brd
+# gerb274x-mill-drill.cam
+  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.cmp ${board} Top Pads Vias
+  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.sol ${board} Bottom Pads Vias
+#  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.mil ${board} Milling
+  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.plc ${board} Dimension tPlace tNames
+  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.stc ${board} tStop
+  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.sts ${board} bStop
+#  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.crc ${board} tCream
+#  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.dpv ${board} Drills
+#  - ${EAGLE} -X -dGERBER_RS274X -o${outputfile}.drh ${board} Holes
 
 after_script:
   - tree
