@@ -1,4 +1,5 @@
-## Blattdurchmesser
+## Projekte
+### Blattdurchmesser
 [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
 https://gitlab.ethz.ch/PLL/Blattdurchmesser
@@ -33,5 +34,8 @@ origin  https://gitlab.ethz.ch/PLL/eagle.git (push)
 origin  https://github.com/drtrigon/ethz-pll-eagle.git (push)
 ```
 
-## Further Info
+### Enable EDRC.ME for a Repository (for Eagle)
+...
+
+### Further Info
 https://github.com/drtrigon/test-eagle-edrc
