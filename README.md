@@ -1,3 +1,8 @@
+## Issues/TODO
+* replace images here with correct ones
+* add images from here to Blattdurchmesser repo
+* consider enabling and adding eagle-travis struff here and in Blattdurchmesser repo
+
 ## Blattdurchmesser
 [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/test-eagle-edrc/img/status.svg)](https://edrc.me/g/drtrigon/test-eagle-edrc)
 
