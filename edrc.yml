@@ -1,0 +1,3 @@
+eagle:
+  drc:
+  - file: "projects/Blattdurchmesser/Blattdurchmesser.brd"

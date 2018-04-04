@@ -1,0 +1,63 @@
+# https://github.com/ethz-pll/Blattdurchmesser/blob/master/.travis.yml
+# https://github.com/nickandrew/docker-eagle/blob/master/Dockerfile
+# http://dangerousprototypes.com/blog/2015/06/04/help-with-xvfb-eagle-and-permissions-on-ubuntu/
+# http://elementalselenium.com/tips/38-headless
+# https://www.autodesk.com/products/eagle/blog/how-to-install-autodesk-eagle-on-windows-mac-and-linux/
+
+#language: c
+language: generic
+
+#env:
+#  global:
+#    #- ARDUINO_VERSION=1.6.5
+#    #- ARDUINO_VERSION=1.8.1
+#    - ARDUINO_VERSION=1.8.2
+#  matrix:
+#    - BOARD="arduino:avr:uno"
+
+before_install:
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
+  - sleep 3
+  - export DISPLAY=:1.0
+  - sudo apt-get install xdotool
+  #- wget https://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_8.7.1_English_Linux_64bit.tar.gz
+  #- tar xf Autodesk_EAGLE_8.7.1_English_Linux_64bit.tar.gz
+  #- $PWD/eagle-8.7.1/eagle & sleep 3; xdotool key Y
+  # needs autocad account and login
+  #- $PWD/eagle-8.7.1/eagle -?
+  - wget ftp://ftp.cadsoft.de/eagle/program/7.7/eagle-lin64-7.7.0.run
+  - chmod +x $PWD/eagle-lin64-7.7.0.run
+  - $PWD/eagle-lin64-7.7.0.run & sleep 10; xdotool key Return; xdotool key Return; xdotool key Return; xdotool key Return; sleep 10; xdotool keydown alt key E; xdotool keyup alt; xdotool key Return; xdotool key Return
+#  - sudo mv arduino-$ARDUINO_VERSION /usr/local/share/arduino
+#  - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
+  - sudo apt-get install tree
+  #- sudo pip install ino
+  #- sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
+
+#install:
+#  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
+#  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
+
+script:
+  #- $PWD/eagle-8.7.1/eagle -? || true
+  - ls -la $HOME/eagle-7.7.0/bin/eagle || true
+  - $HOME/eagle-7.7.0/bin/eagle -? || true
+#  #- ls -la
+#  #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
+#  - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
+#  #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
+
+after_script:
+  - tree
+  - tree $HOME
+#  - export ELF_FILE=`find /tmp/ -name "Blattdurchmesser.ino.elf"`
+#  - readelf -a $ELF_FILE
+#  #- objdump -x $ELF_FILE
+#  #- nm $ELF_FILE || true
+#  - strings -d $ELF_FILE
+#  - size $ELF_FILE
+
+#notifications:
+#  email:
+#    on_success: change
+#    on_failure: change
