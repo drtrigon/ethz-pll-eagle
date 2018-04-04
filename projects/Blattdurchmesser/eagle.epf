@@ -433,10 +433,11 @@ UsedLibrary="//winhome/usoler/My Documents/eagle/lbr/MyLibrary/Original/seeed/Se
 UsedLibrary="//winhome/usoler/My Documents/eagle/lbr/MyLibrary/Original/seeed/Seeed-OPL-fuse.lbr"
 UsedLibrary="//winhome/usoler/My Documents/eagle/lbr/MyLibrary/Original/seeed/Seeed-OPL-ic.lbr"
 UsedLibrary="//winhome/usoler/My Documents/eagle/lbr/MyLibrary/Original/seeed/Seeed-OPL-sensor.lbr"
+UsedLibrary="//winhome/usoler/My Documents/eagle/lbr/reprap.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="587 64 1495 838"
+Loc="146 155 2065 1171"
 State=2
 Number=0
 

@@ -4715,7 +4715,7 @@ general purpose rectifier, 1 A</description>
 <text x="-30.48" y="53.34" size="1.778" layer="91">1, violet</text>
 <text x="-30.48" y="50.8" size="1.778" layer="91">2, blue</text>
 <text x="-30.48" y="45.72" size="1.778" layer="91">4, green</text>
-<text x="-27.94" y="33.02" size="1.778" layer="91">+5V</text>
+<text x="-27.94" y="30.48" size="1.778" layer="91">+5V</text>
 <text x="-12.7" y="7.62" size="1.778" layer="91">5V+GND available;
 no pull-up needed on AVR</text>
 <text x="-12.7" y="38.1" size="1.778" layer="91">GND available only;
@@ -4766,9 +4766,9 @@ stromlos?</text>
 <instance part="U$8" gate="1" x="127" y="55.88"/>
 <instance part="C1" gate="G$1" x="190.5" y="45.72"/>
 <instance part="SV5" gate="1" x="-38.1" y="48.26" rot="MR180"/>
-<instance part="R1" gate="G$1" x="-7.62" y="25.4" rot="R90"/>
-<instance part="R2" gate="G$1" x="0" y="25.4" rot="R90"/>
-<instance part="U$9" gate="1" x="-30.48" y="33.02"/>
+<instance part="R1" gate="G$1" x="-7.62" y="22.86" rot="R90"/>
+<instance part="R2" gate="G$1" x="0" y="22.86" rot="R90"/>
+<instance part="U$9" gate="1" x="-30.48" y="30.48"/>
 <instance part="U$10" gate="1" x="-30.48" y="40.64"/>
 <instance part="U$11" gate="1" x="7.62" y="-25.4"/>
 <instance part="SV6" gate="1" x="-38.1" y="78.74" rot="MR180"/>
@@ -4871,15 +4871,15 @@ stromlos?</text>
 </segment>
 <segment>
 <pinref part="U$9" gate="1" pin="+5V"/>
-<wire x1="-30.48" y1="33.02" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="30.48" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="SV4" gate="1" pin="1"/>
 <wire x1="-30.48" y1="27.94" x2="-30.48" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="30.48" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="27.94" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="0" y1="30.48" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="0" y1="27.94" x2="-7.62" y2="27.94" width="0.1524" layer="91"/>
 <junction x="-30.48" y="27.94"/>
-<junction x="-7.62" y="30.48"/>
+<junction x="-7.62" y="27.94"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="1" pin="+5V"/>
@@ -4968,12 +4968,24 @@ stromlos?</text>
 <wire x1="142.24" y1="35.56" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="SV4" gate="1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-30.48" y1="17.78" x2="-7.62" y2="17.78" width="0.1524" layer="91"/>
+<junction x="-7.62" y="17.78"/>
+<wire x1="-7.62" y1="17.78" x2="27.94" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="17.78" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="D2"/>
+<wire x1="27.94" y1="53.34" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="SV4" gate="1" pin="3"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-30.48" y1="15.24" x2="0" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="0" y1="15.24" x2="0" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="0" y1="15.24" x2="0" y2="17.78" width="0.1524" layer="91"/>
 <junction x="0" y="15.24"/>
 <wire x1="0" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="15.24" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
@@ -5038,28 +5050,9 @@ stromlos?</text>
 <junction x="137.16" y="45.72"/>
 </segment>
 </net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="SV4" gate="1" pin="2"/>
-<wire x1="-30.48" y1="17.78" x2="-7.62" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="17.78" x2="-7.62" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="17.78" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="D2"/>
-<wire x1="27.94" y1="53.34" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="17.78" x2="27.94" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-7.62" y="17.78"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="204,1,114.3,43.18,U1,VIN,,,,"/>
-<approved hash="204,1,114.3,40.64,U1,GND1,,,,"/>
-<approved hash="204,1,114.3,38.1,U1,GND2,,,,"/>
-<approved hash="204,1,114.3,33.02,U1,3V,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
