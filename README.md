@@ -35,7 +35,7 @@ origin  https://github.com/drtrigon/ethz-pll-eagle.git (push)
 ```
 
 ### Enable EDRC.ME for a Repository (for Eagle)
-...
+http://www.edrc.me/docs/
 
 ### Further Info
 https://github.com/drtrigon/test-eagle-edrc
