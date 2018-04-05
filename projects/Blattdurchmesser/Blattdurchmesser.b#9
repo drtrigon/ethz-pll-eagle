@@ -548,6 +548,30 @@ W = angled&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="Elkos">
+<description>Elektrolyt</description>
+<packages>
+<package name="R_ELK_8.1">
+<wire x1="-2.286" y1="1.016" x2="4.826" y2="1.016" width="0.254" layer="41"/>
+<wire x1="4.826" y1="1.016" x2="4.826" y2="-1.016" width="0.254" layer="41"/>
+<wire x1="4.826" y1="-1.016" x2="-2.286" y2="-1.016" width="0.254" layer="41"/>
+<wire x1="-2.286" y1="-1.016" x2="-2.286" y2="1.016" width="0.254" layer="41"/>
+<circle x="1.27" y="0" radius="4.0719" width="0.254" layer="21"/>
+<pad name="P" x="-1.27" y="0" drill="0.8" diameter="1.6764" shape="square"/>
+<pad name="N" x="3.81" y="0" drill="0.8" diameter="1.6764"/>
+<text x="-1.397" y="1.397" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<rectangle x1="-1.524" y1="-3.048" x2="4.064" y2="3.048" layer="43"/>
+<rectangle x1="4.064" y1="-2.032" x2="4.826" y2="2.032" layer="43"/>
+<rectangle x1="4.826" y1="-1.016" x2="5.334" y2="1.016" layer="43"/>
+<rectangle x1="-2.286" y1="-2.032" x2="-1.524" y2="2.032" layer="43"/>
+<rectangle x1="-2.794" y1="-0.762" x2="-2.286" y2="1.016" layer="43"/>
+<rectangle x1="-0.508" y1="3.048" x2="3.048" y2="3.81" layer="43"/>
+<rectangle x1="0.508" y1="3.81" x2="2.286" y2="4.064" layer="43"/>
+<rectangle x1="-0.508" y1="-3.81" x2="3.048" y2="-3.048" layer="43"/>
+<rectangle x1="0.508" y1="-4.064" x2="2.032" y2="-3.81" layer="43"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -769,6 +793,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="-74.93" y="-29.21" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="-74.93" y="-29.21" size="1.778" layer="27" display="off"/>
 </element>
+<element name="C1" library="Elkos" package="R_ELK_8.1" value="R_ELKO_8.1" x="-78.74" y="-35.56"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -776,9 +801,11 @@ design rules under a new name.</description>
 <contactref element="SV2" pad="1"/>
 <contactref element="SV2" pad="7"/>
 <contactref element="SV1" pad="1"/>
+<contactref element="C1" pad="N"/>
 <wire x1="68.58" y1="44.45" x2="81.28" y2="41.91" width="0" layer="19" extent="1-1"/>
 <wire x1="81.28" y1="26.67" x2="81.28" y2="41.91" width="0" layer="19" extent="1-1"/>
 <wire x1="-54.864" y1="52.07" x2="68.58" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="-74.93" y1="-35.56" x2="-54.864" y2="52.07" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="U1" pad="VIN"/>
@@ -799,6 +826,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="+12V">
 <contactref element="SV2" pad="8"/>
+<contactref element="C1" pad="P"/>
+<wire x1="-80.01" y1="-35.56" x2="81.28" y2="44.45" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="SV2" pad="6"/>
