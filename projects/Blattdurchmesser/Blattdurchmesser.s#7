@@ -4606,6 +4606,8 @@ pull-up disabled stepper treiber</text>
 <text x="-30.48" y="76.2" size="1.778" layer="91">4, green</text>
 <text x="-30.48" y="93.98" size="1.778" layer="91">4, green</text>
 <text x="121.92" y="45.72" size="1.778" layer="91">+12V</text>
+<text x="58.42" y="71.12" size="1.778" layer="91">Arduino Voltage-Regulator verwenden für 12-&gt;5V
+anstelle eines zusätzlichen 7805</text>
 </plain>
 <instances>
 <instance part="K1" gate="TX2_COIL" x="17.78" y="93.98"/>

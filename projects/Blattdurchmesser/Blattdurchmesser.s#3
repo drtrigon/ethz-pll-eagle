@@ -4913,6 +4913,12 @@ anstelle eines zusätzlichen 7805</text>
 <wire x1="-7.62" y1="17.78" x2="25.4" y2="17.78" width="0.1524" layer="91"/>
 <junction x="-7.62" y="17.78"/>
 <pinref part="Q1" gate="G$1" pin="D2"/>
+<wire x1="25.4" y1="53.34" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="68.58" x2="116.84" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="68.58" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="A0"/>
+<wire x1="116.84" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
+<junction x="25.4" y="53.34"/>
 </segment>
 </net>
 <net name="N$8" class="0">

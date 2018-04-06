@@ -4762,8 +4762,8 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="U$8" library="Netze" deviceset="+5V" device=""/>
 <part name="C1" library="Elkos" deviceset="R_ELKO_8.1" device=""/>
 <part name="SV5" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
 <part name="U$9" library="Netze" deviceset="+5V" device=""/>
 <part name="U$10" library="Netze" deviceset="GND" device=""/>
 <part name="U$11" library="Netze" deviceset="GND" device=""/>
@@ -4771,7 +4771,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="U$12" library="Netze" deviceset="GND" device=""/>
 <part name="U$13" library="Netze" deviceset="+12V" device=""/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="4.7k"/>
 <part name="Q1" library="adafruit" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT"/>
 <part name="SV7" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="X1" library="con-wago-508" deviceset="W237-02P" device=""/>
@@ -5196,12 +5196,6 @@ pull-up disabled stepper treiber</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="204,1,114.3,43.18,U1,VIN,,,,"/>
-<approved hash="204,1,114.3,40.64,U1,GND1,,,,"/>
-<approved hash="204,1,114.3,38.1,U1,GND2,,,,"/>
-<approved hash="204,1,114.3,33.02,U1,3V,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>

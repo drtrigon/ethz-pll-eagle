@@ -4500,33 +4500,33 @@ Grid 5.08 mm&lt;p&gt;
 </classes>
 <parts>
 <part name="K1" library="relay" deviceset="TX2_RELAY" device="&quot;"/>
-<part name="SV1" library="con-lsta" deviceset="FE08-1" device=""/>
-<part name="SV2" library="con-lsta" deviceset="FE08-1" device=""/>
-<part name="SV4" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV1" library="con-lsta" deviceset="FE08-1" device="" value="A4988"/>
+<part name="SV2" library="con-lsta" deviceset="FE08-1" device="" value="A4988"/>
+<part name="SV4" library="con-lstb" deviceset="MA04-1" device="" value="optical"/>
 <part name="SV11" library="con-lstb" deviceset="MA04-2" device=""/>
 <part name="U$1" library="Netze" deviceset="GND" device=""/>
 <part name="U$3" library="Netze" deviceset="GND" device=""/>
 <part name="U$4" library="Netze" deviceset="GND" device=""/>
 <part name="U$5" library="Netze" deviceset="+5V" device=""/>
 <part name="U$6" library="Netze" deviceset="+12V" device=""/>
-<part name="SV3" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV3" library="con-lstb" deviceset="MA04-1" device="" value="stepper"/>
 <part name="U$7" library="Netze" deviceset="+5V" device=""/>
 <part name="C1" library="Elkos" deviceset="R_ELKO_8.1" device=""/>
-<part name="SV5" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV5" library="con-lstb" deviceset="MA04-1" device="" value="mechanical"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
 <part name="U$9" library="Netze" deviceset="+5V" device=""/>
 <part name="U$10" library="Netze" deviceset="GND" device=""/>
 <part name="U$11" library="Netze" deviceset="GND" device=""/>
-<part name="SV6" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV6" library="con-lstb" deviceset="MA04-1" device="" value="protect2"/>
 <part name="U$13" library="Netze" deviceset="+12V" device=""/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="4.7k"/>
 <part name="Q1" library="adafruit" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT"/>
-<part name="SV7" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV7" library="con-lstb" deviceset="MA04-1" device="" value="protect1"/>
 <part name="X1" library="con-wago-508" deviceset="W237-02P" device=""/>
 <part name="U$2" library="Netze" deviceset="+12V" device=""/>
-<part name="SV8" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV8" library="con-lstb" deviceset="MA04-1" device="" value="OLED"/>
 <part name="U$12" library="Netze" deviceset="GND" device=""/>
 <part name="U$14" library="Netze" deviceset="+5V" device=""/>
 </parts>
