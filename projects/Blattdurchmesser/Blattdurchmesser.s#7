@@ -4514,19 +4514,19 @@ Grid 5.08 mm&lt;p&gt;
 <part name="U$8" library="Netze" deviceset="+5V" device=""/>
 <part name="C1" library="Elkos" deviceset="R_ELKO_8.1" device=""/>
 <part name="SV5" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
 <part name="U$9" library="Netze" deviceset="+5V" device=""/>
 <part name="U$10" library="Netze" deviceset="GND" device=""/>
 <part name="U$11" library="Netze" deviceset="GND" device=""/>
 <part name="SV6" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="U$12" library="Netze" deviceset="GND" device=""/>
 <part name="U$13" library="Netze" deviceset="+12V" device=""/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="?"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="4.7k"/>
 <part name="Q1" library="adafruit" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT"/>
 <part name="SV7" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="X1" library="con-wago-508" deviceset="W237-02P" device=""/>
+<part name="U$2" library="Netze" deviceset="+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4553,7 +4553,7 @@ Grid 5.08 mm&lt;p&gt;
 <text x="198.12" y="38.1" size="1.778" layer="91" align="bottom-right">red</text>
 <text x="198.12" y="35.56" size="1.778" layer="91" align="bottom-right">yellow</text>
 <text x="198.12" y="33.02" size="1.778" layer="91" align="bottom-right">white</text>
-<text x="121.92" y="40.64" size="1.778" layer="91">+5V</text>
+<text x="121.92" y="38.1" size="1.778" layer="91">+5V</text>
 <text x="129.54" y="55.88" size="1.778" layer="91">+5V</text>
 <text x="124.46" y="55.88" size="1.778" layer="91" align="bottom-right">DIS</text>
 <text x="195.58" y="50.8" size="1.778" layer="91" align="bottom-right">47u</text>
@@ -4605,6 +4605,7 @@ pull-up disabled stepper treiber</text>
 <text x="-30.48" y="99.06" size="1.778" layer="91">2, blue</text>
 <text x="-30.48" y="76.2" size="1.778" layer="91">4, green</text>
 <text x="-30.48" y="93.98" size="1.778" layer="91">4, green</text>
+<text x="121.92" y="45.72" size="1.778" layer="91">+12V</text>
 </plain>
 <instances>
 <instance part="K1" gate="TX2_COIL" x="17.78" y="93.98"/>
@@ -4619,7 +4620,7 @@ pull-up disabled stepper treiber</text>
 <instance part="U$5" gate="1" x="185.42" y="55.88"/>
 <instance part="U$6" gate="1" x="182.88" y="50.8"/>
 <instance part="SV3" gate="1" x="205.74" y="35.56" rot="R180"/>
-<instance part="U$7" gate="1" x="119.38" y="40.64"/>
+<instance part="U$7" gate="1" x="119.38" y="38.1"/>
 <instance part="U$8" gate="1" x="127" y="55.88"/>
 <instance part="C1" gate="G$1" x="190.5" y="45.72"/>
 <instance part="SV5" gate="1" x="-38.1" y="48.26" rot="MR180"/>
@@ -4629,7 +4630,6 @@ pull-up disabled stepper treiber</text>
 <instance part="U$10" gate="1" x="-30.48" y="40.64"/>
 <instance part="U$11" gate="1" x="7.62" y="-25.4"/>
 <instance part="SV6" gate="1" x="-38.1" y="78.74" rot="MR180"/>
-<instance part="U$12" gate="1" x="-30.48" y="71.12"/>
 <instance part="U$13" gate="1" x="17.78" y="104.14"/>
 <instance part="D1" gate="1" x="10.16" y="93.98" rot="R90"/>
 <instance part="R3" gate="G$1" x="137.16" y="71.12" rot="R90"/>
@@ -4637,6 +4637,7 @@ pull-up disabled stepper treiber</text>
 <instance part="SV7" gate="1" x="-38.1" y="96.52" rot="MR180"/>
 <instance part="X1" gate="-1" x="175.26" y="53.34"/>
 <instance part="X1" gate="-2" x="175.26" y="2.54"/>
+<instance part="U$2" gate="1" x="119.38" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -4723,7 +4724,7 @@ pull-up disabled stepper treiber</text>
 </segment>
 <segment>
 <pinref part="U$7" gate="1" pin="+5V"/>
-<wire x1="119.38" y1="35.56" x2="119.38" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="35.56" x2="119.38" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="5V"/>
 <wire x1="119.38" y1="35.56" x2="114.3" y2="35.56" width="0.1524" layer="91"/>
 </segment>
@@ -4763,6 +4764,12 @@ pull-up disabled stepper treiber</text>
 <pinref part="X1" gate="-1" pin="KL"/>
 <wire x1="180.34" y1="53.34" x2="182.88" y2="53.34" width="0.1524" layer="91"/>
 <junction x="182.88" y="53.34"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="1" pin="+12V"/>
+<wire x1="119.38" y1="45.72" x2="119.38" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="VIN"/>
+<wire x1="119.38" y1="43.18" x2="114.3" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4923,12 +4930,6 @@ pull-up disabled stepper treiber</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="204,1,114.3,43.18,U1,VIN,,,,"/>
-<approved hash="204,1,114.3,40.64,U1,GND1,,,,"/>
-<approved hash="204,1,114.3,38.1,U1,GND2,,,,"/>
-<approved hash="204,1,114.3,33.02,U1,3V,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
