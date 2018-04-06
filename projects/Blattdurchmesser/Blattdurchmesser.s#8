@@ -4752,6 +4752,8 @@ stromlos?</text>
 normalbetrieb - arduino D12 steuert
 wenn switch auf geht (oder fehlt);
 pull-up disabled stepper treiber</text>
+<text x="-48.26" y="88.9" size="1.778" layer="91">2te in serie
+wenn nicht vorhanden jumper setzen</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="83.82" y="38.1" rot="R90"/>
