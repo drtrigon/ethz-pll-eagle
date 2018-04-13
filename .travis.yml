@@ -135,7 +135,7 @@ after_success:
   - git config user.email 'travis@travis-ci.org'
   - git config user.name 'Travis CI'
   - git commit --message "Travis build $TRAVIS_BUILD_NUMBER"
-  - git push -f https://$GIT_USER:$GIT_PASS@github.com/drtrigon/eagle.git result/travis  # dangerous; overwrite remote branch!
+  - git push -f https://$GIT_USER:$GIT_PASS@github.com/drtrigon/ethz-pll-eagle.git result/travis  # dangerous; overwrite remote branch!
   - tree $HOME
 
 #notifications:
