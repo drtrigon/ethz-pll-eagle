@@ -6,7 +6,7 @@ https://gitlab.ethz.ch/PLL/Blattdurchmesser
 
 [![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
-https://github.com/drtrigon/ethz-pll-eagle/tree/result/travis
+https://github.com/drtrigon/ethz-pll-eagle/tree/result/pcb
 
 ## Setup
 
